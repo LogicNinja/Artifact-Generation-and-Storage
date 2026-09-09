@@ -1,0 +1,32 @@
+name: Build and Store Artifact
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout project
+        uses: actions/checkout@v6
+
+      - name: Create production ZIP
+        run: |
+          mkdir -p build
+          zip -r build/production-package.zip app/
+
+      - name: Verify ZIP file
+        run: |
+          ls -lh build/
+          unzip -l build/production-package.zip
+
+      - name: Upload production artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-package
+          path: build/production-package.zip
+          if-no-files-found: error
