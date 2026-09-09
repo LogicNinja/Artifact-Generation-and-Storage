@@ -1,89 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GitHub Actions artifact generation and storage demo">
-    <title>Artifact Studio</title>
-    <link rel="stylesheet" href="./style.css">
+
+    <title>Artifact Generation & Storage</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="background">
-        <div class="glow glow-one"></div>
-        <div class="glow glow-two"></div>
-    </div>
 
-    <main class="card">
+    <main class="page">
+
         <header class="header">
-            <div class="brand">
-                <div class="brand-mark">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+            <div class="logo">
+                <div class="logo-icon">A</div>
+                <div>
+                    <h2>ArtifactFlow</h2>
+                    <span>CI/CD Build Pipeline</span>
                 </div>
-                <span>Artifact Studio</span>
             </div>
 
-            <div class="badge">
-                <span class="badge-dot"></span>
-                Live
+            <div class="status">
+                <span class="status-dot"></span>
+                Workflow Successful
             </div>
         </header>
 
+
         <section class="hero">
-            <div class="eyebrow">
-                <span>GITHUB ACTIONS</span>
-                <span class="line"></span>
-                <span>BUILD PIPELINE</span>
+
+            <div class="hero-content">
+
+                <span class="eyebrow">GITHUB ACTIONS • AUTOMATED BUILD</span>
+
+                <h1>
+                    Artifact Generation
+                    <span>& Storage</span>
+                </h1>
+
+                <p>
+                    A cloud-based workflow that automatically packages
+                    application files into a production-ready artifact
+                    and securely stores it after every build.
+                </p>
+
             </div>
 
-            <h1>
-                Build it.
-                <span>Package it.</span>
-                Ship it.
-            </h1>
+        </section>
 
-            <p class="description">
-                A production-ready application package generated automatically
-                and securely stored through GitHub Actions.
-            </p>
 
-            <div class="success">
-                <div class="success-icon">✓</div>
+        <section class="pipeline-section">
+
+            <div class="section-heading">
                 <div>
-                    <strong>Build completed successfully</strong>
-                    <span>Your production artifact is ready.</span>
+                    <span class="small-label">WORKFLOW</span>
+                    <h3>Build Pipeline</h3>
                 </div>
+
+                <span class="branch">main</span>
             </div>
+
+
+            <div class="pipeline">
+
+                <div class="pipeline-step">
+                    <div class="step-icon">01</div>
+                    <div class="step-line"></div>
+
+                    <h4>Source</h4>
+                    <p>Project files</p>
+                </div>
+
+
+                <div class="pipeline-step">
+                    <div class="step-icon">02</div>
+                    <div class="step-line"></div>
+
+                    <h4>Build</h4>
+                    <p>GitHub runner</p>
+                </div>
+
+
+                <div class="pipeline-step">
+                    <div class="step-icon">03</div>
+                    <div class="step-line"></div>
+
+                    <h4>Package</h4>
+                    <p>ZIP archive</p>
+                </div>
+
+
+                <div class="pipeline-step">
+                    <div class="step-icon">04</div>
+
+                    <h4>Storage</h4>
+                    <p>GitHub Artifact</p>
+                </div>
+
+            </div>
+
         </section>
 
-        <section class="stats">
-            <div class="stat">
-                <span class="label">WORKFLOW</span>
-                <strong>Build & Store</strong>
+
+        <section class="details">
+
+            <div class="artifact-card">
+
+                <div class="card-top">
+                    <div class="file-icon">ZIP</div>
+
+                    <div>
+                        <span class="small-label">GENERATED ARTIFACT</span>
+                        <h3>production-package.zip</h3>
+                    </div>
+
+                    <div class="check">✓</div>
+                </div>
+
+                <div class="card-divider"></div>
+
+                <div class="file-details">
+
+                    <div>
+                        <span>FORMAT</span>
+                        <strong>ZIP Archive</strong>
+                    </div>
+
+                    <div>
+                        <span>CONTENTS</span>
+                        <strong>Application Files</strong>
+                    </div>
+
+                    <div>
+                        <span>STATUS</span>
+                        <strong class="green">Ready</strong>
+                    </div>
+
+                </div>
+
             </div>
 
-            <div class="divider"></div>
 
-            <div class="stat">
-                <span class="label">PACKAGE</span>
-                <strong>Production ZIP</strong>
+            <div class="info-card">
+
+                <span class="small-label">AUTOMATION</span>
+
+                <h3>Cloud Build</h3>
+
+                <p>
+                    Every commit triggers the workflow,
+                    creates the package, and uploads the
+                    resulting artifact automatically.
+                </p>
+
+                <div class="tech-list">
+                    <span>GitHub Actions</span>
+                    <span>Ubuntu Runner</span>
+                    <span>upload-artifact</span>
+                </div>
+
             </div>
 
-            <div class="divider"></div>
-
-            <div class="stat">
-                <span class="label">STATUS</span>
-                <strong class="status-text">Successful</strong>
-            </div>
         </section>
 
-        <footer class="footer">
-            <span>Automated deployment pipeline</span>
-            <span class="footer-dot"></span>
-            <span>GitHub Actions</span>
+
+        <footer>
+
+            <span>Artifact Generation & Storage</span>
+
+            <span>Automated • Packaged • Stored</span>
+
         </footer>
+
     </main>
+
 </body>
 </html>
