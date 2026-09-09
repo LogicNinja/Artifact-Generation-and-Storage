@@ -17,7 +17,8 @@ jobs:
       - name: Create production ZIP
         run: |
           mkdir -p build
-          zip -r build/production-package.zip app/
+          cd app
+          zip -r ../build/production-package.zip .
 
       - name: Verify ZIP file
         run: |
